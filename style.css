@@ -14,6 +14,16 @@ font-style: normal;
 
 */
 
+/*
+Gradient Pallete
+#4278d9
+#00a1f1
+#00c2e2
+#00dcb7
+#8bef88
+#f9f871
+*/
+
 /* Reset */
 * {
     padding: 0;
@@ -31,8 +41,23 @@ font-style: normal;
 /* Custom Style */
 
 body {
-    /*TODO: Agregar fondo */
+    background-color: white;
 }
+
+body:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url(assets/img/my-bg.png);
+    background-repeat: repeat;
+    background-position: 50% 0;
+    background-size: 50%;
+  }
 
 header {
     position: fixed;
@@ -48,6 +73,7 @@ header {
 }
 
 .logo {
+    color: #4278d9;
     font-size: 30px;
     font-weight: 600;
 }
@@ -61,12 +87,13 @@ header {
     padding-bottom: 5px;
     font-size: 15px;
     font-weight: 600;
+    color: #4278d9;
     border-bottom: 1px solid transparent;
     transition: all .4s ease;
 }
 
 .navlist a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #4278d9;
 }
 
 #menu-icon {
@@ -89,7 +116,6 @@ header {
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #f4f4f4 0%, #f2f2f2 25%, #ffffff 75%);
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -113,16 +139,18 @@ section {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
+    color: #00a1f1;
 }
 
 .hero-text h5 {
+    color: #4278d9;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 0px;
 }
 
 .hero-text p {
-    font-size: 80%;
+    font-size: 85%;
     margin-bottom: 40px;
     line-height: 1.9;
 }
@@ -134,11 +162,12 @@ section {
 .hero-image .hero-image-box {
     line-height: 0;
     overflow: hidden;
-    border-radius: 8px;
-    width: 400px;
+    border-radius: 50%;
+    width: 460px;
+    opacity: 0.8;
     height: auto;
-    box-shadow: 3px 3px 20px -8px rgba(0, 0, 0, 0.3);
-    transition: margin 5s linear, width 5s linear, opacity 5s linear;
+    box-shadow: 3px 3px 20px -8px rgba(0, 0, 0, 0.6);
+    transition: width .4s ease, opacity .4s ease, transform 1s ease;
 }
 
 .hero-image .hero-image-box img {
@@ -147,20 +176,21 @@ section {
 }
 
 .hero-image .hero-image-box:hover {
-    width: 450px;
-    opacity: 0.6;
+    width: 520px;
+    transform: translateX(-60px);
+    opacity: 1;
 }
 
 .hero-text a {
     display: inline-block;
-    background-color: #000;
+    background-color: #4278d9;
     border: 2px solid transparent;
-    color: #fff;
+    color: white;
     padding: 10px 25px;
     border-radius: 4px;
     line-height: 1.4;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all .5s ease;
@@ -168,21 +198,36 @@ section {
 
 .hero-text a:hover {
     background-color: transparent;
-    border:  2px solid #000;
-    color: #000;
+    border:  2px solid #4278d9;
+    color: #4278d9;
     font-weight: 700;
     transform: translateX(5px);
 }
 
 .hero-text a.mi-portfolio {
     background-color: transparent;
-    border:  2px solid #000;
-    color: #000;
-    font-weight: 700;
+    border:  2px solid #4278d9;
+    color: #4278d9;
     margin-left: 15px;
 }
 
 .hero-text a i {
+    color: white;
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.hero-text a:hover i {
+    color: #4278d9;
+}
+
+
+.hero-text a.mi-portfolio i {
+    color: #4278d9;
+    font-size: 18px;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -199,10 +244,11 @@ section {
     margin: 20px 0;
     font-size: 24px;
     transition: all .5s ease;
+    color: #4278d9;
 }
 
 .icons i:hover {
-    color: slategray;
+    color: #4278d9;
     transform: translateY(-5px);
 }
 
@@ -214,12 +260,13 @@ section {
 
 .scroll-down i {
     display: block;
+    color: white;
     padding: 12px;
-    font-size: 32px;
-    background-color: lightgray;
-    border-radius: 4px;
-    box-shadow: 2px 2px 15px -10px rgba(0, 0, 0, 0.6);
+    font-size: 26px;
     transition: all .5s ease;
+    background-color: #4278d9;
+    border-radius: 4px;
+    box-shadow: 3px 3px 20px -8px rgba(0, 0, 0, 0.6);
 }
 
 .scroll-down i:hover {
